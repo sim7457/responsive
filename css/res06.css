@@ -1,0 +1,283 @@
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mbtn {
+    display: none;
+}
+
+#header {
+    line-height: 100px;
+    border-bottom: 1px solid #ddd;
+}
+
+#header .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header nav>ul {
+    display: flex;
+    gap: 30px;
+}
+
+#header nav>ul>li {
+    position: relative;
+}
+
+#header nav>ul>li .submenu {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #ff0;
+    line-height: 40px;
+
+    width: 100px;
+    text-align: center;
+
+    display: none;
+}
+
+#header nav>ul>li:hover .submenu {
+    display: block;
+}
+
+#header nav>ul>li a {
+    display: block;
+}
+
+.content {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.content p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.content .inner {
+    display: flex;
+    gap: 30px;
+}
+
+.content .inner figure {
+    flex: 1;
+}
+
+#footer {
+    border-top: 1px solid #ddd;
+    padding: 30px 0 50px 0;
+    text-align: center;
+}
+
+/* 
+
+
+
+responsive 768
+
+
+
+*/
+
+@media (max-width: 768px) {
+    .inner {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    /* https://jonsuh.com/hamburgers/ 쓰면 겁나 편함 */
+
+    .mbtn {
+        display: block;
+
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        background: #f7f7f7;
+        padding: 5px;
+        line-height: 1;
+
+        font-size: 0;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .mbtn button {
+        background: transparent;
+        border: none;
+    }
+
+    .mbtn::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 5px;
+        right: 5px;
+        height: 1px;
+        background: #333;
+    }
+
+    .mbtn.on::before {
+        display: none;
+    }
+
+    .mbtn::after {
+        content: "";
+        position: absolute;
+        bottom: 7px;
+        left: 5px;
+        right: 5px;
+        height: 1px;
+        background: #333;
+    }
+
+    .mbtn.on::after {
+        display: none;
+    }
+
+    .mbtn button::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        right: 5px;
+        height: 1px;
+        background: #333;
+    }
+
+    .mbtn.on button::before {
+        transform: rotate(45deg);
+    }
+
+    .mbtn button::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        right: 5px;
+        height: 1px;
+        background: #333;
+    }
+
+    .mbtn.on button::after {
+        transform: rotate(-45deg);
+    }
+
+    #header {
+        line-height: 100px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #header h1 {
+        position: relative;
+        z-index: 999;
+        padding: 0 30px;
+    }
+
+    #gnb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: #fff;
+        width: calc(100% - 90px);
+        height: 100vh;
+        border-right: 1px solid #ddd;
+        line-height: 40px;
+        transition: 0.5s;
+    }
+
+    #gnb.on {
+        left: 0;
+    }
+
+    #header .inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header nav>ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 150px 0 0 0;
+    }
+
+    #header nav>ul>li {
+        border-bottom: 1px solid #ddd;
+    }
+
+    #header nav>ul>li>a {
+        display: block;
+        padding: 0 30px;
+    }
+
+    #header nav>ul>li {
+        position: relative;
+    }
+
+    #header nav>ul>li .submenu {
+        position: static;
+        transform: translate(0, 0);
+        background: #ff0;
+        line-height: 40px;
+
+        width: auto;
+        text-align: left;
+
+        display: none;
+    }
+
+    #header nav>ul>li:hover .submenu {
+        display: none;
+    }
+
+    #header nav>ul>li a {
+        display: block;
+        padding: 0 30px;
+    }
+
+    .content {
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    .content h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0 0 10px 0;
+    }
+
+    .content p {
+        font-size: 15px;
+        font-weight: 300;
+        margin: 0 0 30px 0;
+    }
+
+    .content .inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .content .inner figure {
+        flex: 1;
+    }
+
+    #footer {
+        border-top: 1px solid #ddd;
+        padding: 30px 0 50px 0;
+        text-align: center;
+    }
+}

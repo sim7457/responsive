@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 기본 01</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <style>
+        .res {
+            background: #f00;
+            color: #fff;
+        }
+
+        .res2 {
+            display: none;
+        }
+
+        @media (max-width:768px) {
+            .res {
+                background: #ff0;
+                color: #fff;
+            }
+
+            .res2 {
+                display: block;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .res {
+                background: #00f;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="res2">
+        <i class="xi-bars"></i>
+    </div>
+    <div class="res">
+        Lorem ipsum dolor sit.
+    </div>
+</body>
+
+</html>
