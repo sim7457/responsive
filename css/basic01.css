@@ -1,0 +1,89 @@
+.basic {
+    color: #f00;
+    background: #0f0;
+}
+
+
+@media (max-width: 1200px) {
+    .basic {
+        color: #fff;
+        background: #ff0;
+    }
+}
+
+.gom {
+    color: #f00;
+    background: tomato;
+}
+
+@media (max-width: 1200px) {
+    .gom {
+        color: #ff0;
+        background: tomato;
+    }
+}
+
+.basic01 {
+    padding: 100px 0;
+}
+
+.basic01 h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.basic01 p {
+    position: relative;
+    z-index: 999;
+
+    display: block;
+    margin: 0 0 30px 0;
+
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+
+}
+
+.basic01 .inner {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.basic01 .inner figure {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+
+    .basic01 h2 {
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+
+    .basic01 p {
+        margin: 0 0 30px 0;
+
+        font-size: 15px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .basic01 .inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .basic01 .inner figure {
+        flex: 1;
+    }
+}
